@@ -54,7 +54,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_152603) do
   create_table "money_transactions", force: :cascade do |t|
     t.float "amount", default: 0.0
     t.string "status", default: "pending", null: false
-    t.string "type", null: false
+    t.string "payment_type", null: false
     t.string "notes"
     t.bigint "motor_id", null: false
     t.bigint "driver_id", null: false
@@ -63,7 +63,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_28_152603) do
   end
 
   create_table "motors", force: :cascade do |t|
-    t.string "model", null: false
+    t.string "name", null: false
+    t.string "plate_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

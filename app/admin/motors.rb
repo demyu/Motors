@@ -5,7 +5,7 @@ ActiveAdmin.register Motor do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :model
+  permit_params :name, :plate_number
   #
   # or
   #
